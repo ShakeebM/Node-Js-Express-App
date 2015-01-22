@@ -1,0 +1,4 @@
+select * from (select * from oneshot where Parameter='Voltage Adc' ORDER BY MeasTime limit 1) union (select * from( select * from oneshot where Parameter='Current Bal' ORDER BY MeasTime limit 1) union select * from( select * from oneshot where Parameter='IC Temperature' ORDER BY MeasTime limit 1));
+
+
+//select * from (select Cell1,Cell2,Cell3,Cell4,Cell5,Cell6,Cell7,Cell8,Cell9,Cell10,Cell11,Cell12 from oneshot where Parameter='Voltage Adc' ORDER BY MeasTime limit 1) union select  from( select Cell1,Cell2,Cell3,Cell4,Cell5,Cell6,Cell7,Cell8,Cell9,Cell10,Cell11,Cell12 from oneshot where Parameter='Current Bal' ORDER BY MeasTime limit 1) union select * from( select Cell1,Cell2,Cell3,Cell4,Cell5,Cell6,Cell7,Cell8,Cell9,Cell10,Cell11,Cell12 from oneshot where Parameter='IC Temperature' ORDER BY MeasTime limit 1)
